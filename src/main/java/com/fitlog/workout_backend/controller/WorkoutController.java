@@ -10,7 +10,12 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/api/workouts")
-@CrossOrigin(origins = "http://localhost:3000")
+@CrossOrigin(origins = {
+        "http://localhost:3000",
+        "http://localhost:5173",
+        "https://fitlog-frontend.vercel.app",
+        "https://fitlog-frontend-ehn9147.vercel.app"
+})
 public class WorkoutController {
 
     private final WorkoutRepository repo;
